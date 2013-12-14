@@ -8,13 +8,16 @@ $(function(){
 		$('#brujula ul.individual li').tap(function(){
 			var watchBR = null;	
 			if($(this).index() = 0){
+				alert(0);
 				watchBR =  navigator.compass.watchHeading(function(h){
 					$('#brujula .scroll h2').text(
 					h.magneticHeading);
+
 					
 					},function(err){
 						alert(err.code);
-						},{frequency: 500});
+						},{frequency: 5000});
+
 				
 			}
 			else
